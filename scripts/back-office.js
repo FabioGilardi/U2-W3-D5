@@ -90,6 +90,9 @@ const uploadBook = function (e) {
       if (response.ok) {
         console.log(response);
         alert("Libro aggiunto correttamente");
+        if (bookId) {
+          location.assign("./index.html");
+        }
       } else {
         throw new Error();
       }
